@@ -6,10 +6,10 @@
     <title>Trimatric AI – Future AI Solutions</title>
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
   </head>
-  <body class="max-w-7xl mx-auto bg-gray-100">
+  <body class="max-w-7xl md:mx-auto mx-4 bg-gray-100">
     <!-- navbar  -->
     <nav class="bg-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div>
         <div class="flex justify-between items-center py-4">
           <!-- Logo -->
           <a href="#" class="text-2xl font-bold text-gray-800">
@@ -105,6 +105,90 @@
       </div>
     </nav>
     <!-- navbar -->
+
+    <!-- banner section -->
+    <section
+      class="flex flex-col md:flex-row items-center gap-10 justify-between max-w-7xl mx-auto my-10"
+    >
+      <!-- Left Side -->
+      <div class="text-center md:text-left md:w-1/2">
+        <h2 class="text-3xl md:text-5xl font-bold mb-6 leading-tight">
+          Unleash the Power of AI: Transforming Businesses with Intelligent
+          Solutions
+        </h2>
+
+        <button class="relative group overflow-hidden rounded-full shadow-lg">
+          <!-- Background AI Image -->
+          <div
+            class="absolute inset-0 bg-right bg-cover opacity-80 group-hover:opacity-100 transition duration-300"
+            style="
+              background-image: url('https://img.freepik.com/premium-photo/red-technology-space-ai-generated_87720-9676.jpg');
+            "
+          ></div>
+
+          <!-- Play Icon and Text -->
+          <div
+            class="relative z-10 flex items-center space-x-3 px-6 py-3 bg-black/50 rounded-full text-white font-semibold text-lg backdrop-blur-md cursor-pointer"
+          >
+            <svg class="w-6 h-6 fill-current text-white" viewBox="0 0 24 24">
+              <path d="M8 5v14l11-7z" />
+            </svg>
+            <span>Watch Video</span>
+          </div>
+        </button>
+      </div>
+
+      <!-- Right Side - Background Image -->
+      <div class="md:w-1/2 flex justify-center">
+        <div
+          class="w-96 h-72 md:w-[40rem] md:h-96 bg-cover bg-center rounded-lg shadow-lg flex justify-center items-center"
+          style="
+            background-image: url('https://thumbs.dreamstime.com/b/digital-brain-model-consisting-wireless-connections-card-middle-artificial-intelligence-132572885.jpg?w=768');
+          "
+        >
+          <div class="text-center">
+            <h3 class="text-gray-300 text-3xl">
+              Highlight the potential benefits of Neural Networks, such as
+              improved decision-making, predictive analytics, and automation.
+            </h3>
+            <button
+              class="relative group overflow-hidden rounded-full shadow-lg"
+            >
+              <!-- Background AI Image -->
+              <div
+                class="absolute transition duration-300 cursor-pointer"
+              ></div>
+
+              <!-- Go to products page-->
+              <a
+                href="/products"
+                class="relative z-10 flex items-center px-6 py-3 bg-blue-900 hover:bg-blue-500 text-white font-semibold rounded-full shadow-lg transition duration-300 overflow-hidden group"
+              >
+                <!-- Left Arrow (Hidden on Hover) -->
+                <svg
+                  class="w-6 h-6 fill-current text-white transition duration-300 group-hover:opacity-0"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M15 19l-7-7 7-7" />
+                </svg>
+
+                <!-- Button Text -->
+                <span class="mx-2">Go to Products Page</span>
+
+                <!-- Right Arrow (Visible on Hover) -->
+                <svg
+                  class="w-6 h-6 fill-current text-white opacity-0 transition duration-300 group-hover:opacity-100"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M9 5l7 7-7 7" />
+                </svg>
+              </a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- banner section -->
 
     <script>
       const menuBtn = document.getElementById("menu-btn");
