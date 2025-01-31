@@ -6,7 +6,7 @@
     <title>Trimatric AI – Future AI Solutions</title>
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
   </head>
-  <body class="max-w-7xl md:mx-auto mx-4 bg-gray-100">
+  <body class="max-w-7xl mx-auto px-4 bg-gray-100">
     <!-- navbar  -->
     <nav class="bg-white">
       <div>
@@ -191,6 +191,20 @@
     <!-- banner section -->
 
     <!-- conpany logo section  -->
+  <section class="my-20">
+    <div class="slider-container relative w-full overflow-hidden">
+      <div class="slider flex transition-transform duration-300 ease-in-out justify-center gap-5 cursor-pointer" id="slider">
+        <img src="https://trimatric.ai/wp-content/uploads/2024/10/AiHouse.webp" alt="AiHouse" class="w-48 h-16 object-cover hover:opacity-100 opacity-50 duration-300">
+        <img src="https://trimatric.ai/wp-content/uploads/2024/10/Bionica.webp" alt="Bionica" class="w-48 h-16 object-cover hover:opacity-100 opacity-50 duration-300">
+        <img src="https://trimatric.ai/wp-content/uploads/2024/10/SIgmind.webp" alt="SIgmind" class="w-48 h-16 object-cover hover:opacity-100 opacity-50 duration-300">
+        <img src="https://trimatric.ai/wp-content/uploads/2024/10/TDS.webp" alt="TDS" class="w-48 h-16 object-cover hover:opacity-100 opacity-50 duration-300">
+        <img src="https://trimatric.ai/wp-content/uploads/2024/10/Anex-AI.webp" alt="Anex AI" class="w-48 h-16 object-cover hover:opacity-100 opacity-50 duration-300">
+      </div>
+      <button onclick="moveSlide(-1)" class="absolute left-2 top-1/2 transform -translate-y-1/2 text-white bg-black p-2 rounded">Prev</button>
+      <button onclick="moveSlide(1)" class="absolute right-2 top-1/2 transform -translate-y-1/2 text-white bg-black p-2 rounded">Next</button>
+    </div>
+  </section>
+    
     <!-- conpany logo section  -->
 
     <script>
@@ -200,6 +214,19 @@
       menuBtn.addEventListener("click", () => {
         menu.classList.toggle("hidden");
       });
+
+
+
+  let currentIndex = 0;
+
+  function moveSlide(direction) {
+    const slider = document.getElementById("slider");
+    const slides = slider.children;
+    const totalSlides = slides.length;
+    
+    currentIndex = (currentIndex + direction + totalSlides) % totalSlides;
+    slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+  }
     </script>
   </body>
 </html>
