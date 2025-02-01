@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Trimatric AI – Future AI Solutions</title>
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
   </head>
   <body class="max-w-7xl mx-auto px-4 bg-gray-100">
     <!-- navbar  -->
@@ -241,7 +246,7 @@
     <!-- conpany logo section  -->
 
     <!-- our work section  -->
-    <section class="my-10">
+    <section>
       <div
         class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4"
       >
@@ -476,6 +481,93 @@
     </section>
     <!-- our services section  -->
 
+    <!-- our work step section  -->
+    <section class="my-20">
+      <h2
+        class="text-2xl text-gray-500 md:text-4xl font-bold text-center my-10"
+      >
+        Our Approach to Building AI Solutions
+      </h2>
+
+      <div class="swiper steps-slider mb-10">
+        <div class="swiper-wrapper px-10">
+          <!-- Step 1 -->
+          <div class="swiper-slide bg-white p-6 rounded-lg shadow-md">
+            <div class="flex items-center space-x-3">
+              <div class="text-3xl font-bold text-blue-500">01</div>
+              <div class="text-sm text-gray-600">Step</div>
+            </div>
+            <h6 class="text-lg font-semibold mt-3">
+              Problem Definition & Data Collection
+            </h6>
+            <p class="text-gray-600 text-sm mt-2">
+              Define the business problem or objective. Identify and collect
+              relevant data from various sources.
+            </p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="swiper-slide bg-white p-6 rounded-lg shadow-md">
+            <div class="flex items-center space-x-3">
+              <div class="text-3xl font-bold text-blue-500">02</div>
+              <div class="text-sm text-gray-600">Step</div>
+            </div>
+            <h6 class="text-lg font-semibold mt-3">
+              Data Preprocessing & Feature Engineering
+            </h6>
+            <p class="text-gray-600 text-sm mt-2">
+              Clean the data, handle missing values, and create features to
+              improve model performance.
+            </p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="swiper-slide bg-white p-6 rounded-lg shadow-md">
+            <div class="flex items-center space-x-3">
+              <div class="text-3xl font-bold text-blue-500">03</div>
+              <div class="text-sm text-gray-600">Step</div>
+            </div>
+            <h6 class="text-lg font-semibold mt-3">
+              Model Selection & Training
+            </h6>
+            <p class="text-gray-600 text-sm mt-2">
+              Choose the best algorithm, train the model, and tune
+              hyperparameters for optimal performance.
+            </p>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="swiper-slide bg-white p-6 rounded-lg shadow-md">
+            <div class="flex items-center space-x-3">
+              <div class="text-3xl font-bold text-blue-500">04</div>
+              <div class="text-sm text-gray-600">Step</div>
+            </div>
+            <h6 class="text-lg font-semibold mt-3">
+              Evaluation, Deployment & Monitoring
+            </h6>
+            <p class="text-gray-600 text-sm mt-2">
+              Evaluate model performance, deploy, and monitor accuracy over
+              time.
+            </p>
+          </div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="flex justify-between mt-4">
+          <button
+            class="swiper-button-prev text-white p-2 rounded-full shadow"
+          ></button>
+          <button
+            class="swiper-button-next text-white p-2 rounded-full shadow"
+          ></button>
+        </div>
+
+        <!-- Pagination -->
+        <div class="swiper-pagination mt-4"></div>
+      </div>
+    </section>
+    <!-- our work step section  -->
+
     <!-- Footer section satrt  -->
     <footer class="bg-gray-900 text-white py-10">
       <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-6">
@@ -561,6 +653,32 @@
         currentIndex = (currentIndex + direction + totalSlides) % totalSlides;
         slider.style.transform = `translateX(-${currentIndex * 100}%)`;
       }
+
+      var swiper = new Swiper(".steps-slider", {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        loop: true,
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          640: {
+            slidesPerView: 2,
+          },
+          1024: {
+            slidesPerView: 3,
+          },
+        },
+      });
     </script>
   </body>
 </html>
