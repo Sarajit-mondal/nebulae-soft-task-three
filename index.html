@@ -191,21 +191,121 @@
     <!-- banner section -->
 
     <!-- conpany logo section  -->
-  <section class="my-20">
-    <div class="slider-container relative w-full overflow-hidden">
-      <div class="slider flex transition-transform duration-300 ease-in-out justify-center gap-5 cursor-pointer" id="slider">
-        <img src="https://trimatric.ai/wp-content/uploads/2024/10/AiHouse.webp" alt="AiHouse" class="w-48 h-16 object-cover hover:opacity-100 opacity-50 duration-300">
-        <img src="https://trimatric.ai/wp-content/uploads/2024/10/Bionica.webp" alt="Bionica" class="w-48 h-16 object-cover hover:opacity-100 opacity-50 duration-300">
-        <img src="https://trimatric.ai/wp-content/uploads/2024/10/SIgmind.webp" alt="SIgmind" class="w-48 h-16 object-cover hover:opacity-100 opacity-50 duration-300">
-        <img src="https://trimatric.ai/wp-content/uploads/2024/10/TDS.webp" alt="TDS" class="w-48 h-16 object-cover hover:opacity-100 opacity-50 duration-300">
-        <img src="https://trimatric.ai/wp-content/uploads/2024/10/Anex-AI.webp" alt="Anex AI" class="w-48 h-16 object-cover hover:opacity-100 opacity-50 duration-300">
+    <section class="my-20">
+      <div class="slider-container relative w-full overflow-hidden">
+        <div
+          class="slider flex transition-transform duration-300 ease-in-out justify-center gap-5 cursor-pointer"
+          id="slider"
+        >
+          <img
+            src="https://trimatric.ai/wp-content/uploads/2024/10/AiHouse.webp"
+            alt="AiHouse"
+            class="w-48 h-16 object-cover hover:opacity-100 opacity-50 duration-300"
+          />
+          <img
+            src="https://trimatric.ai/wp-content/uploads/2024/10/Bionica.webp"
+            alt="Bionica"
+            class="w-48 h-16 object-cover hover:opacity-100 opacity-50 duration-300"
+          />
+          <img
+            src="https://trimatric.ai/wp-content/uploads/2024/10/SIgmind.webp"
+            alt="SIgmind"
+            class="w-48 h-16 object-cover hover:opacity-100 opacity-50 duration-300"
+          />
+          <img
+            src="https://trimatric.ai/wp-content/uploads/2024/10/TDS.webp"
+            alt="TDS"
+            class="w-48 h-16 object-cover hover:opacity-100 opacity-50 duration-300"
+          />
+          <img
+            src="https://trimatric.ai/wp-content/uploads/2024/10/Anex-AI.webp"
+            alt="Anex AI"
+            class="w-48 h-16 object-cover hover:opacity-100 opacity-50 duration-300"
+          />
+        </div>
+        <button
+          onclick="moveSlide(-1)"
+          class="absolute left-2 top-1/2 transform -translate-y-1/2 text-white bg-black p-2 rounded"
+        >
+          Prev
+        </button>
+        <button
+          onclick="moveSlide(1)"
+          class="absolute right-2 top-1/2 transform -translate-y-1/2 text-white bg-black p-2 rounded"
+        >
+          Next
+        </button>
       </div>
-      <button onclick="moveSlide(-1)" class="absolute left-2 top-1/2 transform -translate-y-1/2 text-white bg-black p-2 rounded">Prev</button>
-      <button onclick="moveSlide(1)" class="absolute right-2 top-1/2 transform -translate-y-1/2 text-white bg-black p-2 rounded">Next</button>
-    </div>
-  </section>
-    
+    </section>
+
     <!-- conpany logo section  -->
+
+    <!-- Footer section satrt  -->
+    <footer class="bg-gray-900 text-white py-10">
+      <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-6">
+        <!-- Company Info -->
+        <div>
+          <h2 class="text-xl font-bold">Your Company</h2>
+          <p class="mt-2 text-gray-400">
+            Providing quality services since 2024.
+          </p>
+          <p class="mt-2 text-gray-400">Email: support@yourcompany.com</p>
+          <p class="mt-2 text-gray-400">Phone: +1 (234) 567-890</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h3 class="text-lg font-semibold">Quick Links</h3>
+          <ul class="mt-2 space-y-2">
+            <li><a href="#" class="text-gray-400 hover:text-white">Home</a></li>
+            <li>
+              <a href="#" class="text-gray-400 hover:text-white">About</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-400 hover:text-white">Services</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-400 hover:text-white">Contact</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Social Media -->
+        <div>
+          <h3 class="text-lg font-semibold">Follow Us</h3>
+          <div class="mt-2 flex space-x-4">
+            <a href="#" class="text-gray-400 hover:text-white">Facebook</a>
+            <a href="#" class="text-gray-400 hover:text-white">Twitter</a>
+            <a href="#" class="text-gray-400 hover:text-white">Instagram</a>
+          </div>
+        </div>
+
+        <!-- Newsletter -->
+        <div>
+          <h3 class="text-lg font-semibold">Subscribe</h3>
+          <p class="mt-2 text-gray-400">Get the latest updates and offers.</p>
+          <input
+            type="email"
+            placeholder="Enter your email"
+            class="mt-2 p-2 w-full rounded bg-gray-800 text-white"
+          />
+          <button
+            class="mt-2 w-full bg-blue-600 py-2 rounded hover:bg-blue-700"
+          >
+            Subscribe
+          </button>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="mt-6 text-center text-gray-500">
+        <p>&copy; 2024 Your Company. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Footer section end  -->
+
+    <!-- javascript  -->
 
     <script>
       const menuBtn = document.getElementById("menu-btn");
@@ -215,18 +315,16 @@
         menu.classList.toggle("hidden");
       });
 
+      let currentIndex = 0;
 
+      function moveSlide(direction) {
+        const slider = document.getElementById("slider");
+        const slides = slider.children;
+        const totalSlides = slides.length;
 
-  let currentIndex = 0;
-
-  function moveSlide(direction) {
-    const slider = document.getElementById("slider");
-    const slides = slider.children;
-    const totalSlides = slides.length;
-    
-    currentIndex = (currentIndex + direction + totalSlides) % totalSlides;
-    slider.style.transform = `translateX(-${currentIndex * 100}%)`;
-  }
+        currentIndex = (currentIndex + direction + totalSlides) % totalSlides;
+        slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+      }
     </script>
   </body>
 </html>
