@@ -568,6 +568,50 @@
     </section>
     <!-- our work step section  -->
 
+    <!-- our completed project and security section-->
+    <section class="my-20">
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <!-- Left Side - Image -->
+        <div>
+          <h2 class="text-2xl md:text-4xl text-gray-400 text-center">
+            Face Recognition | Optimize operation with seamless verification
+          </h2>
+          <p class="text-xl text-gray-400 my-5">
+            Highly efficient way to verify identities quickly and accurately,
+            significantly streamlining operations.
+          </p>
+          <img
+            src="https://itchronicles.com/wp-content/uploads/2023/07/face-recognition-1024x630.jpg"
+            alt="Placeholder"
+            class="rounded-lg shadow-lg w-full"
+          />
+        </div>
+
+        <!-- Right Side - Content -->
+        <div class="text-gray-800">
+          <h2 class="text-2xl md:text-4xl mb-4 text-gray-400">
+            We Create Awesome Digital Products
+          </h2>
+          <p class="text-lg mb-6 text-gray-400">
+            Our team delivers top-quality web solutions tailored to your needs.
+          </p>
+
+          <!-- Counters -->
+          <div class="grid grid-cols-2 gap-4 text-center">
+            <div>
+              <p class="text-6xl font-bold text-blue-600" id="counter1">0</p>
+              <p>Happy Clients</p>
+            </div>
+            <div>
+              <p class="text-6xl font-bold text-blue-600" id="counter2">0</p>
+              <p>Projects Completed</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- our completed project and security section-->
+
     <!-- Footer section satrt  -->
     <footer class="bg-gray-900 text-white py-10">
       <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-6">
@@ -679,6 +723,18 @@
           },
         },
       });
+
+      // Simple counter animation
+      function animateCounter(id, target) {
+        let count = 0;
+        const interval = setInterval(() => {
+          document.getElementById(id).textContent = count;
+          count++;
+          if (count > target) clearInterval(interval);
+        }, 50);
+      }
+      animateCounter("counter1", 150);
+      animateCounter("counter2", 200);
     </script>
   </body>
 </html>
