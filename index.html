@@ -10,29 +10,109 @@
       href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
     />
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
   </head>
   <body class="max-w-7xl mx-auto px-4 bg-gray-100">
     <!-- navbar  -->
-    <nav class="bg-white">
-      <div>
+    <nav
+      id="header"
+      class="fixed top-0 left-0 w-full text-center py-4 transition-transform duration-300 bg-white shadow-lg"
+    >
+      <div class="container mx-auto px-4">
         <div class="flex justify-between items-center py-4">
           <!-- Logo -->
           <a href="#" class="text-2xl font-bold text-gray-800">
             <img
               class="size-12"
               src="https://trimatric.ai/wp-content/uploads/2024/10/Icon-SVG-96.svg"
-              alt="Page Loader Image"
+              alt="Logo"
             />
           </a>
 
           <!-- Menu for larger screens -->
           <ul class="hidden md:flex space-x-6 text-gray-700">
-            <li><a href="#" class="hover:text-blue-500">Home</a></li>
-            <li><a href="#" class="hover:text-blue-500">About Us</a></li>
-            <li><a href="#" class="hover:text-blue-500">Services</a></li>
-            <li><a href="#" class="hover:text-blue-500">Products</a></li>
-            <li><a href="#" class="hover:text-blue-500">Careers</a></li>
-            <li><a href="#" class="hover:text-blue-500">Contacts</a></li>
+            <li class="relative group">
+              <a href="#" class="text-gray-700 relative">
+                <span
+                  class="group-hover:opacity-0 transition-opacity duration-300"
+                  >Home</span
+                >
+                <span
+                  class="absolute left-0 top-0 opacity-0 group-hover:opacity-100 transform translate-y-10 group-hover:translate-y-0 transition duration-600 font-bold text-blue-500"
+                >
+                  Home
+                </span>
+              </a>
+            </li>
+            <li class="relative group">
+              <a href="#" class="text-gray-700 relative">
+                <span
+                  class="group-hover:opacity-0 transition-opacity duration-300"
+                  >About Us</span
+                >
+                <span
+                  class="absolute left-0 top-0 opacity-0 group-hover:opacity-100 transform translate-y-10 group-hover:translate-y-0 transition duration-600 font-bold text-blue-500 text-nowrap"
+                >
+                  About Us
+                </span>
+              </a>
+            </li>
+            <li class="relative group">
+              <a href="#" class="text-gray-700 relative">
+                <span
+                  class="group-hover:opacity-0 transition-opacity duration-300"
+                  >Services</span
+                >
+                <span
+                  class="absolute left-0 top-0 opacity-0 group-hover:opacity-100 transform translate-y-10 group-hover:translate-y-0 transition duration-600 font-bold text-blue-500"
+                >
+                  Services
+                </span>
+              </a>
+            </li>
+            <li class="relative group">
+              <a href="#" class="text-gray-700 relative">
+                <span
+                  class="group-hover:opacity-0 transition-opacity duration-300"
+                  >Products</span
+                >
+                <span
+                  class="absolute left-0 top-0 opacity-0 group-hover:opacity-100 transform translate-y-10 group-hover:translate-y-0 transition duration-600 font-bold text-blue-500"
+                >
+                  Products
+                </span>
+              </a>
+            </li>
+            <li class="relative group">
+              <a href="#" class="text-gray-700 relative">
+                <span
+                  class="group-hover:opacity-0 transition-opacity duration-300"
+                  >Careers</span
+                >
+                <span
+                  class="absolute left-0 top-0 opacity-0 group-hover:opacity-100 transform translate-y-10 group-hover:translate-y-0 transition duration-600 font-bold text-blue-500"
+                >
+                  Careers
+                </span>
+              </a>
+            </li>
+            <li class="relative group">
+              <a href="#" class="text-gray-700 relative">
+                <span
+                  class="group-hover:opacity-0 transition-opacity duration-300"
+                  >Contacts</span
+                >
+                <span
+                  class="absolute left-0 top-0 opacity-0 group-hover:opacity-100 transform translate-y-10 group-hover:translate-y-0 transition duration-600 font-bold text-blue-500"
+                >
+                  Contacts
+                </span>
+              </a>
+            </li>
           </ul>
 
           <!-- Get in Touch Button -->
@@ -68,42 +148,83 @@
         <!-- Mobile Menu -->
         <div id="menu" class="hidden md:hidden bg-white shadow-md">
           <ul class="flex flex-col space-y-2 p-4">
-            <li>
-              <a href="#" class="block text-gray-700 hover:text-blue-500"
-                >Home</a
-              >
+            <li class="relative group">
+              <a href="#" class="block text-gray-700 relative">
+                <span
+                  class="group-hover:opacity-0 transition-opacity duration-300"
+                  >Home</span
+                >
+                <span
+                  class="absolute left-0 top-0 opacity-0 group-hover:opacity-100 transform translate-y-10 group-hover:translate-y-0 transition duration-600 font-bold text-blue-500"
+                >
+                  Home
+                </span>
+              </a>
             </li>
-            <li>
-              <a href="#" class="block text-gray-700 hover:text-blue-500"
-                >About Us</a
-              >
+            <li class="relative group">
+              <a href="#" class="block text-gray-700 relative">
+                <span
+                  class="group-hover:opacity-0 transition-opacity duration-300"
+                  >About Us</span
+                >
+                <span
+                  class="absolute left-0 top-0 opacity-0 group-hover:opacity-100 transform translate-y-10 group-hover:translate-y-0 transition duration-600 font-bold text-blue-500"
+                >
+                  About Us
+                </span>
+              </a>
             </li>
-            <li>
-              <a href="#" class="block text-gray-700 hover:text-blue-500"
-                >Services</a
-              >
+            <li class="relative group">
+              <a href="#" class="block text-gray-700 relative">
+                <span
+                  class="group-hover:opacity-0 transition-opacity duration-300"
+                  >Services</span
+                >
+                <span
+                  class="absolute left-0 top-0 opacity-0 group-hover:opacity-100 transform translate-y-10 group-hover:translate-y-0 transition duration-600 font-bold text-blue-500"
+                >
+                  Services
+                </span>
+              </a>
             </li>
-            <li>
-              <a href="#" class="block text-gray-700 hover:text-blue-500"
-                >Products</a
-              >
+            <li class="relative group">
+              <a href="#" class="block text-gray-700 relative">
+                <span
+                  class="group-hover:opacity-0 transition-opacity duration-300"
+                  >Products</span
+                >
+                <span
+                  class="absolute left-0 top-0 opacity-0 group-hover:opacity-100 transform translate-y-10 group-hover:translate-y-0 transition duration-600 font-bold text-blue-500"
+                >
+                  Products
+                </span>
+              </a>
             </li>
-            <li>
-              <a href="#" class="block text-gray-700 hover:text-blue-500"
-                >Careers</a
-              >
+            <li class="relative group">
+              <a href="#" class="block text-gray-700 relative">
+                <span
+                  class="group-hover:opacity-0 transition-opacity duration-300"
+                  >Careers</span
+                >
+                <span
+                  class="absolute left-0 top-0 opacity-0 group-hover:opacity-100 transform translate-y-10 group-hover:translate-y-0 transition duration-600 font-bold text-blue-500"
+                >
+                  Careers
+                </span>
+              </a>
             </li>
-            <li>
-              <a href="#" class="block text-gray-700 hover:text-blue-500"
-                >Contacts</a
-              >
-            </li>
-            <li>
-              <a
-                href="#"
-                class="block bg-blue-600 text-white text-center py-2 rounded-lg hover:bg-blue-700"
-                >Get in Touch</a
-              >
+            <li class="relative group">
+              <a href="#" class="block text-gray-700 relative">
+                <span
+                  class="group-hover:opacity-0 transition-opacity duration-300"
+                  >Contacts</span
+                >
+                <span
+                  class="absolute left-0 top-0 opacity-0 group-hover:opacity-100 transform translate-y-10 group-hover:translate-y-0 transition duration-600 font-bold text-blue-500"
+                >
+                  Contacts
+                </span>
+              </a>
             </li>
           </ul>
         </div>
@@ -113,11 +234,14 @@
 
     <!-- banner section -->
     <section
-      class="flex flex-col md:flex-row items-center gap-10 justify-between max-w-7xl mx-auto my-10"
+      class="flex flex-col md:flex-row items-center gap-10 justify-between max-w-7xl mx-auto my-10 mt-40"
     >
       <!-- Left Side -->
       <div class="text-center md:text-left md:w-1/2">
-        <h2 class="text-3xl md:text-5xl font-bold mb-6 leading-tight">
+        <h2
+          id="animated-text"
+          class="text-3xl md:text-5xl font-bold mb-6 leading-tight text-gray-400 animate__animated animate__backInLeft"
+        >
           Unleash the Power of AI: Transforming Businesses with Intelligent
           Solutions
         </h2>
@@ -144,7 +268,9 @@
       </div>
 
       <!-- Right Side - Background Image -->
-      <div class="md:w-1/2 flex justify-center">
+      <div
+        class="md:w-1/2 flex justify-center animate__animated animate__backInRight"
+      >
         <div
           class="w-96 h-72 md:w-[40rem] md:h-96 bg-cover bg-center rounded-lg shadow-lg flex justify-center items-center"
           style="
@@ -152,7 +278,7 @@
           "
         >
           <div class="text-center">
-            <h3 class="text-gray-300 text-3xl">
+            <h3 id="animated-text" class="text-gray-300 text-3xl">
               Highlight the potential benefits of Neural Networks, such as
               improved decision-making, predictive analytics, and automation.
             </h3>
@@ -365,7 +491,7 @@
       <div class="w-full md:w-1/2">
         <div class="mx-auto max-w-3xl p-4">
           <p
-            class="text-gray-700 text-lg md:text-xl leading-relaxed font-normal"
+            class="text-gray-400 text-lg md:text-xl leading-relaxed font-normal"
           >
             <span class="font-semibold">TRIMATRIC AI</span> is a
             forward-thinking technology company developing cutting-edge AI-based
@@ -680,6 +806,44 @@
     <!-- javascript  -->
 
     <script>
+      // textanimation
+      document.addEventListener("DOMContentLoaded", function () {
+        const textElement = document.getElementById("animated-text");
+        const words = textElement.innerText.split(" ");
+
+        textElement.innerHTML = words
+          .map((word) => `<span class="opacity-0">${word}</span>`)
+          .join(" ");
+
+        gsap.to("#animated-text span", {
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+          stagger: 0.4, // Delay between each word animation
+          ease: "power2.out",
+        });
+      });
+      // textanimation
+      // navbar
+      let lastScrollTop = 0;
+      const header = document.getElementById("header");
+
+      window.addEventListener("scroll", function () {
+        let scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+        if (scrollTop > lastScrollTop) {
+          // Scrolling down, hide header
+          header.classList.add("-translate-y-full");
+        } else {
+          // Scrolling up, show header
+          header.classList.remove("-translate-y-full");
+        }
+
+        lastScrollTop = scrollTop;
+      });
+
+      // navbar
+
       const menuBtn = document.getElementById("menu-btn");
       const menu = document.getElementById("menu");
 
