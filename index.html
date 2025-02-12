@@ -921,6 +921,29 @@
       setInterval(() => {
         nextButton.click();
       }, 3000);
+
+      // counter
+      function animateCounter(id, targetValue, duration) {
+        let counter = document.getElementById(id);
+        let startValue = 0;
+        let increment = targetValue / (duration / 10);
+
+        let updateCounter = setInterval(() => {
+          startValue += increment;
+          counter.textContent = Math.floor(startValue);
+
+          if (startValue >= targetValue) {
+            counter.textContent = targetValue;
+            clearInterval(updateCounter);
+          }
+        }, 10);
+      }
+
+      // Start the counters on page load
+      window.onload = () => {
+        animateCounter("counter1", 200, 2000); // 250 Happy Clients in 2 seconds
+        animateCounter("counter2", 250, 2000); // 180 Projects Completed in 2 seconds
+      };
     </script>
   </body>
 </html>
