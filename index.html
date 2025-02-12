@@ -20,7 +20,7 @@
     <!-- navbar  -->
     <nav
       id="header"
-      class="fixed top-0 left-0 w-full text-center py-4 transition-transform duration-300 bg-white shadow-lg"
+      class="fixed top-0 left-0 w-full text-center py-4 transition-transform duration-300 bg-white shadow-lg z-50"
     >
       <div class="container mx-auto px-4">
         <div class="flex justify-between items-center py-4">
@@ -126,7 +126,7 @@
           <!-- Mobile Menu Button -->
           <button
             id="menu-btn"
-            class="md:hidden text-gray-800 focus:outline-none"
+            class="md:hidden text-gray-900 focus:outline-none z-50"
           >
             <svg
               class="w-6 h-6"
@@ -147,7 +147,7 @@
 
         <!-- Mobile Menu -->
         <div id="menu" class="hidden md:hidden bg-white shadow-md">
-          <ul class="flex flex-col space-y-2 p-4">
+          <ul class="flex flex-col space-y-2 p-4 z-50">
             <li class="relative group">
               <a href="#" class="block text-gray-700 relative">
                 <span
@@ -237,7 +237,7 @@
       class="flex flex-col md:flex-row items-center gap-10 justify-between max-w-7xl mx-auto my-10 mt-40"
     >
       <!-- Left Side -->
-      <div class="text-center md:text-left md:w-1/2">
+      <div class="text-center md:text-left md:w-1/2 z-0">
         <h2
           id="animated-text"
           class="text-3xl md:text-5xl font-bold mb-6 leading-tight text-gray-400 animate__animated animate__backInLeft"
@@ -272,13 +272,13 @@
         class="md:w-1/2 flex justify-center animate__animated animate__backInRight"
       >
         <div
-          class="w-96 h-72 md:w-[40rem] md:h-96 bg-cover bg-center rounded-lg shadow-lg flex justify-center items-center"
+          class="max-w-full h-72 md:max-w-3xl md:h-96 bg-cover bg-center rounded-lg shadow-lg flex justify-center items-center p-5"
           style="
             background-image: url('https://thumbs.dreamstime.com/b/digital-brain-model-consisting-wireless-connections-card-middle-artificial-intelligence-132572885.jpg?w=768');
           "
         >
           <div class="text-center">
-            <h3 id="animated-text" class="text-gray-300 text-3xl">
+            <h3 id="animated-text" class="text-gray-300 text-xl md:text-3xl">
               Highlight the potential benefits of Neural Networks, such as
               improved decision-making, predictive analytics, and automation.
             </h3>
@@ -322,49 +322,54 @@
     <!-- banner section -->
 
     <!-- conpany logo section  -->
-    <section class="my-20">
-      <div class="slider-container relative w-full overflow-hidden">
+    <section class="my-10 w-full px-4 md:px-10">
+      <div
+        class="slider-container relative w-full max-w-5xl mx-auto overflow-hidden py-15"
+      >
+        <!-- Slider Wrapper -->
         <div
-          class="slider flex transition-transform duration-300 ease-in-out justify-center gap-5 cursor-pointer"
           id="slider"
+          class="slider flex gap-5 transition-transform duration-500 ease-in-out"
         >
           <img
             src="https://trimatric.ai/wp-content/uploads/2024/10/AiHouse.webp"
             alt="AiHouse"
-            class="w-48 h-16 object-cover hover:opacity-100 opacity-50 duration-300"
+            class="slide w-40 h-16 sm:w-48 sm:h-20 md:w-52 md:h-24 object-cover hover:opacity-100 opacity-50 duration-300"
           />
           <img
             src="https://trimatric.ai/wp-content/uploads/2024/10/Bionica.webp"
             alt="Bionica"
-            class="w-48 h-16 object-cover hover:opacity-100 opacity-50 duration-300"
+            class="slide w-40 h-16 sm:w-48 sm:h-20 md:w-52 md:h-24 object-cover hover:opacity-100 opacity-50 duration-300"
           />
           <img
             src="https://trimatric.ai/wp-content/uploads/2024/10/SIgmind.webp"
             alt="SIgmind"
-            class="w-48 h-16 object-cover hover:opacity-100 opacity-50 duration-300"
+            class="slide w-40 h-16 sm:w-48 sm:h-20 md:w-52 md:h-24 object-cover hover:opacity-100 opacity-50 duration-300"
           />
           <img
             src="https://trimatric.ai/wp-content/uploads/2024/10/TDS.webp"
             alt="TDS"
-            class="w-48 h-16 object-cover hover:opacity-100 opacity-50 duration-300"
+            class="slide w-40 h-16 sm:w-48 sm:h-20 md:w-52 md:h-24 object-cover hover:opacity-100 opacity-50 duration-300"
           />
           <img
             src="https://trimatric.ai/wp-content/uploads/2024/10/Anex-AI.webp"
             alt="Anex AI"
-            class="w-48 h-16 object-cover hover:opacity-100 opacity-50 duration-300"
+            class="slide w-40 h-16 sm:w-48 sm:h-20 md:w-52 md:h-24 object-cover hover:opacity-100 opacity-50 duration-300"
           />
         </div>
+
+        <!-- Navigation Buttons -->
         <button
-          onclick="moveSlide(-1)"
-          class="absolute left-2 top-1/2 transform -translate-y-1/2 text-white bg-black p-2 rounded"
+          id="prevButton"
+          class="absolute md:left-0 bottom-0 left-20 md:top-1/2 transform md:-translate-y-1/2 text-white bg-gray-500 p-2 rounded-full"
         >
-          Prev
+          ❮
         </button>
         <button
-          onclick="moveSlide(1)"
-          class="absolute right-2 top-1/2 transform -translate-y-1/2 text-white bg-black p-2 rounded"
+          id="nextButton"
+          class="absolute md:right-0 bottom-0 right-20 md:top-1/2 transform md:-translate-y-1/2 text-white bg-gray-500 p-2 rounded-full"
         >
-          Next
+          ❯
         </button>
       </div>
     </section>
@@ -853,15 +858,6 @@
 
       let currentIndex = 0;
 
-      function moveSlide(direction) {
-        const slider = document.getElementById("slider");
-        const slides = slider.children;
-        const totalSlides = slides.length;
-
-        currentIndex = (currentIndex + direction + totalSlides) % totalSlides;
-        slider.style.transform = `translateX(-${currentIndex * 100}%)`;
-      }
-
       var swiper = new Swiper(".steps-slider", {
         slidesPerView: 1,
         spaceBetween: 20,
@@ -888,17 +884,43 @@
         },
       });
 
-      // Simple counter animation
-      function animateCounter(id, target) {
-        let count = 0;
-        const interval = setInterval(() => {
-          document.getElementById(id).textContent = count;
-          count++;
-          if (count > target) clearInterval(interval);
-        }, 50);
+      // conpany logo slider
+      const slider = document.getElementById("slider");
+      const slides = document.querySelectorAll(".slide");
+      const prevButton = document.getElementById("prevButton");
+      const nextButton = document.getElementById("nextButton");
+
+      let currentIndex1 = 0;
+      const slideWidth = slides[0].offsetWidth + 20; // Including gap
+
+      function moveSlide(index) {
+        slider.style.transform = `translateX(-${index * slideWidth}px)`;
       }
-      animateCounter("counter1", 150);
-      animateCounter("counter2", 200);
+
+      nextButton.addEventListener("click", () => {
+        if (currentIndex1 < slides.length - 1) {
+          currentIndex1++;
+          moveSlide(currentIndex1);
+        } else {
+          currentIndex1 = 0;
+          moveSlide(currentIndex1);
+        }
+      });
+
+      prevButton.addEventListener("click", () => {
+        if (currentIndex1 > 0) {
+          currentIndex1--;
+          moveSlide(currentIndex1);
+        } else {
+          currentIndex1 = slides.length - 1;
+          moveSlide(currentIndex1);
+        }
+      });
+
+      // Auto-scroll every 3 seconds
+      setInterval(() => {
+        nextButton.click();
+      }, 3000);
     </script>
   </body>
 </html>
