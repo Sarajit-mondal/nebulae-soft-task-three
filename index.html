@@ -147,7 +147,7 @@
 
         <!-- Mobile Menu -->
         <div id="menu" class="hidden md:hidden bg-white shadow-md">
-          <ul class="flex flex-col space-y-2 p-4 z-50">
+          <ul class="flex flex-col space-y-2 p-4 z-50 text-right">
             <li class="relative group">
               <a href="#" class="block text-gray-700 relative">
                 <span
@@ -324,50 +324,50 @@
     <!-- conpany logo section  -->
     <section class="my-10 w-full px-4 md:px-10">
       <div
-        class="slider-container relative w-full max-w-5xl mx-auto overflow-hidden py-15"
+        class="slider-container relative w-full max-w-6xl mx-auto overflow-hidden py-15"
       >
         <!-- Slider Wrapper -->
         <div
           id="slider"
-          class="slider flex gap-5 transition-transform duration-500 ease-in-out"
+          class="slider flex [&>*]:max-w-72 gap-5 transition-transform duration-500 ease-in-out"
         >
           <img
             src="https://trimatric.ai/wp-content/uploads/2024/10/AiHouse.webp"
             alt="AiHouse"
-            class="slide w-40 h-16 sm:w-48 sm:h-20 md:w-52 md:h-24 object-cover hover:opacity-100 opacity-50 duration-300"
+            class="slide w-auto  hover:opacity-100 opacity-50 duration-300"
           />
           <img
             src="https://trimatric.ai/wp-content/uploads/2024/10/Bionica.webp"
             alt="Bionica"
-            class="slide w-40 h-16 sm:w-48 sm:h-20 md:w-52 md:h-24 object-cover hover:opacity-100 opacity-50 duration-300"
+            class="slide w-auto  hover:opacity-100 opacity-50 duration-300"
           />
           <img
             src="https://trimatric.ai/wp-content/uploads/2024/10/SIgmind.webp"
             alt="SIgmind"
-            class="slide w-40 h-16 sm:w-48 sm:h-20 md:w-52 md:h-24 object-cover hover:opacity-100 opacity-50 duration-300"
+            class="slide w-auto  hover:opacity-100 opacity-50 duration-300"
           />
           <img
             src="https://trimatric.ai/wp-content/uploads/2024/10/TDS.webp"
             alt="TDS"
-            class="slide w-40 h-16 sm:w-48 sm:h-20 md:w-52 md:h-24 object-cover hover:opacity-100 opacity-50 duration-300"
+            class="slide w-auto  hover:opacity-100 opacity-50 duration-300"
           />
           <img
             src="https://trimatric.ai/wp-content/uploads/2024/10/Anex-AI.webp"
             alt="Anex AI"
-            class="slide w-40 h-16 sm:w-48 sm:h-20 md:w-52 md:h-24 object-cover hover:opacity-100 opacity-50 duration-300"
+            class="slide w-auto  hover:opacity-100 opacity-50 duration-300"
           />
         </div>
 
         <!-- Navigation Buttons -->
         <button
           id="prevButton"
-          class="absolute md:left-0 bottom-0 left-20 md:top-1/2 transform md:-translate-y-1/2 text-white bg-gray-500 p-2 rounded-full"
+          class="md:hidden absolute md:left-0 bottom-0 left-20 md:top-1/2 transform md:-translate-y-1/2 text-white bg-gray-500 p-2 rounded-full"
         >
           ❮
         </button>
         <button
           id="nextButton"
-          class="absolute md:right-0 bottom-0 right-20 md:top-1/2 transform md:-translate-y-1/2 text-white bg-gray-500 p-2 rounded-full"
+          class=" md:hidden absolute md:right-0 bottom-0 right-20 md:top-1/2 transform md:-translate-y-1/2 text-white bg-gray-500 p-2 rounded-full"
         >
           ❯
         </button>
@@ -621,7 +621,7 @@
       </h2>
 
       <div class="swiper steps-slider mb-10">
-        <div class="swiper-wrapper md:p-10 py-10">
+        <div class="swiper-wrapper md:p-10 py-10 [&>*]:min-h-60">
           <!-- Step 1 -->
           <div class="swiper-slide bg-white p-6 rounded-lg shadow-md">
             <div class="flex items-center space-x-3">
@@ -684,7 +684,7 @@
         </div>
 
         <!-- Navigation Buttons -->
-        <div class="flex justify-between mt-4 hidden md:block">
+        <div class="flex justify-between mt-4 hidden ">
           <button
             class="swiper-button-prev text-white p-2 rounded-full shadow"
           ></button>
